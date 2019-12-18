@@ -1,0 +1,194 @@
+// TODO
+// - [X] Mixin
+// - [X] Function
+// - [X] include
+// - [X] extend
+// - [X] import
+// - [X] each
+// - [X] if/elseif/else
+// - [X] for
+// - [X] while
+// - [X] variable
+// - [X] at-root
+// - [X] debug
+// - [X] warn
+// - [X] error
+// - [X] !default
+// - [X] variable as map
+// - [X] variable as list
+// - [X] SASS/SCSS Functions
+// 	- [X] Miscellaneous
+// 		- [X] if
+// 		- [X] unique-id
+// 	- [X] Introspection
+// 		- [X] feature-exists
+// 		- [X] variable-exists
+// 		- [X] global-variable-exists
+// 		- [X] function-exists
+// 		- [X] mixin-exists
+// 		- [X] inspect
+// 		- [X] type-of
+// 		- [X] unit
+// 		- [X] unitless
+// 		- [X] comparable
+// 		- [X] call
+// 	- [X] Selector
+// 		- [X] selector-nest
+// 		- [X] selector-append
+// 		- [X] selector-extend
+// 		- [X] selector-replace
+// 		- [X] selector-unify
+// 		- [X] is-superselector
+// 		- [X] simple-selectors
+// 		- [X] selectors-parse
+// 	- [X] Number
+// 		- [X] percentage
+// 		- [X] round
+// 		- [X] ceil
+// 		- [X] floor
+// 		- [X] abs
+// 		- [X] min
+// 		- [X] max
+// 		- [X] random
+// 	- [X] Maps
+// 		- [X] map-has-key
+// 		- [X] map-keys
+// 		- [X] map-values
+// 		- [X] map-get
+// 		- [X] map-merge
+// 		- [X] map-remove
+// 		- [X] keywords
+// 	- [X] List
+// 		- [X] length
+// 		- [X] nth
+// 		- [X] set-nth
+// 		- [X] join
+// 		- [X] append
+// 		- [X] zip
+// 		- [X] index
+// 		- [X] list-separator
+// 	- [X] RGB
+// 		- [X] rgb
+// 		- [X] rgba
+// 		- [X] red
+// 		- [X] green
+// 		- [X] blue
+// 		- [X] mix
+// 	- [X] HSL
+// 		- [X] hsl
+// 		- [X] hsla
+// 		- [X] hue
+// 		- [X] saturation
+// 		- [X] lightness
+// 		- [X] darken
+// 		- [X] lighten
+// 		- [X] adjust-hue
+// 		- [X] saturate
+// 		- [X] desaturate
+// 		- [X] grayscale
+// 		- [X] complement
+// 		- [X] invert
+// 	- [X] Others Colors
+// 		- [X] adjust-color
+// 		- [X] scale-color
+// 		- [X] change-color
+// 		- [X] ie-hex-str
+// 	- [X] Opacity
+// 		- [X] alpha
+// 		- [X] opacify
+// 		- [X] transparentize
+// 	- [X] String
+// 		- [X] unquote
+// 		- [X] quote
+// 		- [X] str-length
+// 		- [X] str-insert
+// 		- [X] str-index
+// 		- [X] str-slice
+// 		- [X] to-upper-case
+// 		- [X] to-lower-case
+{
+	"comment": {
+		"prefix": "/*",
+		"body": [
+			"/* ==========================================================================",
+			"$0",
+			"========================================================================== */"
+		],
+		"description": "Add new commented description."
+	},
+
+	"variable": {
+		"prefix": "var",
+		"body": [
+			"$${1:var}: ${2:value} ${3:!default}"
+		],
+		"description": "Delcare a new variable."
+	},
+	"include": {
+		"prefix": "inc",
+		"body": [
+			"@include $0;"
+		],
+		"description": "Creative a new include."
+	},
+	"extend": {
+		"prefix": "ext",
+		"body": [
+			"@extend $0;"
+		],
+		"description": "Creative a new extend."
+	},
+	"import": {
+		"prefix": "imp",
+		"body": [
+			"@import \"$0\";"
+		],
+		"description": "Creative a new import."
+	},
+	"mixin": {
+		"prefix": "mix",
+		"body": [
+			"@mixin $mixin_name($params) {",
+			"$0",
+			"}"
+		],
+		"description": "Creative a new mixin."
+	},
+	"@for-loop": {
+		"prefix": "for",
+		"body": [
+			"@for ${0:$$i} from ${1:1} through ${2:10} {",
+			"\t$3",
+			"}"
+		],
+		"description": "@for loop."
+	},
+	"@if-statement": {
+		"prefix": "if",
+		"body": [
+			"@if ${1:something} ${2:==} ${3:true/false} {",
+			"\t$4",
+			"}"
+		],
+		"description": "@if statement."
+	},
+	"@each-loop": {
+		"prefix": "eac",
+		"body": [
+			"@each $${1:var} in ${2:list/map} {",
+			"\t$3",
+			"}"
+		],
+		"description": "@each statement."
+	},
+	"@while-loop": {
+		"prefix": "whi",
+		"body": [
+			"@while $${1:i} ${2:statement} {",
+			"\t$4",
+			"\t$${1:i}: $${1:i} ${3://increment/deincrement}",
+			"}"
+		],
+		"description": "@while statement."
+	}
+}
